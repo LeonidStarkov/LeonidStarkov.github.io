@@ -5,6 +5,7 @@ nav{
     width: 100%;
     height: 60px;
     background: #344051;
+    position: fixed;
 }
 
 .logo{
@@ -14,7 +15,10 @@ nav{
     line-height: 60px;
     padding-left: 390px;
 }
-
+.main{
+    width: 100%;
+    height: 100;
+}
 .menu{
     float: left;
     padding-left: 430px;
@@ -28,6 +32,15 @@ nav{
     line-height: 60px;
     margin-right: 40px;
     text-transform: uppercase;
+    -webkit-animation-timing-function: topshift 0.4s ease forwards ;
+    -o-animation-timing-function: topshift 0.4s ease forwards;
+    animation-timing-function: topshift 0.4s  ease forwards;
+    opacity: 0;
+}
+
+.menu li a{
+    transition: all 0.2s;
+    color: white;
 }
 
 .menu li a:visited{
@@ -36,7 +49,7 @@ nav{
 
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: 100%;
     background: url(../img/1ZQaLQ3T6UYpZB-zcHRwr7xWD2fanUV3o5EEVpAEbKwp2ZEtpxrWJTKyd54ew9LePs9rePL-FKWHeKJEV0eiY61E.png) 90% 100%/auto 85% no-repeat, url(../img/bg.jpg) center/cover no-repeat;
 
 }
@@ -45,6 +58,13 @@ nav{
     margin: 404px 0px 0px 432px;
     color: #2c384a;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation: titlemove 1s ease forwards;
+    -webkit-animation-delay: 2.5s;
+    -o-animation-delay: 2.5s;
+    animation-delay: 2.5s;
   
 }
 
@@ -74,6 +94,7 @@ nav{
     cursor: pointer;
     margin: 50px 14px 0px 14px;
 }
+
 
 .about_me_container h2{
     text-align: center;
@@ -551,4 +572,77 @@ nav{
     text-align: center;
     line-height: 94px;
     color: white;
+}
+.menu li a: visited{
+    transition: all 0.2s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
+
+.menu li a: hover{
+    color: #d17700;
+}
+.menu li a:active{
+    transform: scale(1.1)
+}
+.title__container input{
+  transition: all 0.2s;
+    
+}
+.title__container input:hover{
+    background: #344051;
+    color: white
+}
+.title__container input:active{
+    transform: scale(1.1);
+}
+@keyframes comming{
+ from{
+ opacity: 0;
+ }
+ to{
+    opacity: 1;
+    }
+}
+.logo{
+    -webkit-animation: comming 3s ease;
+    -o-animation:comming 3s ease;
+    animation:comming 3s ease;
+}
+@keyframes topshift{
+    from{
+        opacity: 0;
+        margin-top: -80px;
+}
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+    
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+@keyframes titlemove{
+    from{
+        opacity: 0;
+        margin-left: -500px;
+}
+    to{
+        opacity: 1;
+        margin-left: 404px;
+    }
 }
