@@ -32,9 +32,9 @@ nav{
     line-height: 60px;
     margin-right: 40px;
     text-transform: uppercase;
-    -webkit-animation-timing-function: topshift 0.4s ease forwards ;
-    -o-animation-timing-function: topshift 0.4s ease forwards;
-    animation-timing-function: topshift 0.4s  ease forwards;
+    animation:  topshift 0.4s ease forwards ;
+    animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s  ease forwards;
     opacity: 0;
 }
 

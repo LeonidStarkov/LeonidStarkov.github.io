@@ -32,9 +32,9 @@ nav{
     line-height: 60px;
     margin-right: 40px;
     text-transform: uppercase;
-    -webkit-animation-timing-function: topshift 0.4s ease forwards ;
-    -o-animation-timing-function: topshift 0.4s ease forwards;
-    animation-timing-function: topshift 0.4s  ease forwards;
+    animation: topshift 0.4s ease forwards ;
+    animation: topshift 0.4s ease forwards;
+    animation: topshift 0.4s  ease forwards;
     opacity: 0;
 }
 
@@ -645,4 +645,65 @@ nav{
         opacity: 1;
         margin-left: 404px;
     }
+}
+nav {
+    position: fixed;
+    z-index: 10;
+}
+
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.logo {
+    animation: comming 3s ease;
+}
+
+.menu li a {
+    color: white;
+    transition: all 0.1s;
+    transform: scale(1);
+}
+
+.menu li a:visited {
+    color: white;
+}
+
+.menu li a:hover {
+    color: #e88604;
+}
+
+.menu li a:active {
+    display: inline-block;
+    color: #d17700;
+    transform: scale(1.1);
+}
+
+@keyframes move {
+    from {
+        margin-top: -100px;
+        opacity: 0;
+    }
+
+    to {
+        margin-top: 0px;
+        opacity: 1;
+
+    }
+}
+
+.menu li {
+    opacity: 0;
+    animation: move 0.4s ease forwards;
+}
+
+.menu li:nth-child(2) {
+    animation-delay: 0.4s;
 }
